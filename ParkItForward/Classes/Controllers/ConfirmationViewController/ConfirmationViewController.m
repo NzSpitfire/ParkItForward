@@ -9,7 +9,14 @@
 #import "ConfirmationViewController.h"
 
 @interface ConfirmationViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *slotNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fromDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fromTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tillDateLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *tillTimeLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *reminderControl;
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @end
 
 @implementation ConfirmationViewController
@@ -33,5 +40,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)reminderChangedValue:(id)sender {
+}
+- (IBAction)confirmButtonAction:(id)sender {
+}
 
 @end
