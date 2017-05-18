@@ -11,7 +11,7 @@
 @interface DataProvider : NSObject
 
 + (id)sharedInstance;
-+ (void)getUsers:(void (^)(NSArray *categories))successBlock
+- (void)getUsers:(void (^)(NSArray *categories))successBlock
         failure:(void (^)(NSError* error))failureBlock;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "DataProvider.h"
 #import <AFNetworking/AFNetworking.h>
+#import "UserModel.h"
 
 static NSString * const kGetAllUsersPath = @"https://9ifsk0e0j5.execute-api.ap-southeast-2.amazonaws.com/Testing/users";
 
@@ -28,7 +29,7 @@ static NSString * const kGetAllUsersPath = @"https://9ifsk0e0j5.execute-api.ap-s
     return self;
 }
 
-+ (void)getUsers:(void (^)(NSArray *categories))successBlock
+- (void)getUsers:(void (^)(NSArray *categories))successBlock
          failure:(void (^)(NSError* error))failureBlock{
     
     AFHTTPSessionManager * sessionManager = [AFHTTPSessionManager manager];
@@ -40,10 +41,12 @@ static NSString * const kGetAllUsersPath = @"https://9ifsk0e0j5.execute-api.ap-s
     
     NSString * baseUrl = kGetAllUsersPath;
     NSURL * URL = [NSURL URLWithString:baseUrl];
+    __weak typeof(self) weakSelf = self;
     [sessionManager GET:URL.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSArray * array = [weakSelf parseAllUsers:responseObject];
         if (successBlock){
-            successBlock (responseObject);
+            successBlock (array);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failureBlock){
@@ -52,5 +55,25 @@ static NSString * const kGetAllUsersPath = @"https://9ifsk0e0j5.execute-api.ap-s
     }];
 
 }
-
+-(NSArray*)parseAllUsers:(id)response{
+    NSArray * resValue = nil;
+    if (![response isKindOfClass:[NSArray class]]){
+        return resValue;
+    }
+    
+    NSMutableArray * tempArray = [NSMutableArray array];
+    NSArray * initialArray= (NSArray*)response;
+    NSInteger count = [initialArray count];
+    for (NSInteger index=0; index< count; index++){
+        id currentObject = initialArray[index];
+        UserModel * currentModel = [[UserModel alloc] initWithData:currentObject];
+        if (currentObject){
+            [tempArray addObject:currentModel];
+        }
+    }
+    if ([tempArray count]>0){
+        resValue = [NSArray arrayWithArray:tempArray];
+    }
+    return resValue;
+}
 @end
