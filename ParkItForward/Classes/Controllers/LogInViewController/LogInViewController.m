@@ -10,6 +10,8 @@
 #import "CalendarViewController.h"
 #import "RegistrationViewController.h"
 #import "TodayNavigationViewController.h"
+#import "DataProvider.h"
+#import "UserModel.h"
 
 @interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -45,6 +47,12 @@
 #pragma mark - Button Actions
 
 - (IBAction)loginButtonAction:(id)sender {
+    [[DataProvider sharedInstance] getUser:^(UserModel *user) {
+        
+    } failure:^(NSError *error) {
+        
+    } user:@"brad.clark@foxsports.com.au"];
+    
     TodayNavigationViewController * registerVC = [[TodayNavigationViewController alloc] init];
     [self.navigationController pushViewController:registerVC animated:YES];
     

@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserModel.h"
 
 @interface DataProvider : NSObject
 
 + (id)sharedInstance;
 - (void)getUsers:(void (^)(NSArray *categories))successBlock
         failure:(void (^)(NSError* error))failureBlock;
+- (void)getUser:(void (^)(UserModel *user))successBlock
+         failure:(void (^)(NSError* error))failureBlock
+         user:(NSString*)userString;
 
 @end
