@@ -31,6 +31,7 @@
 		C5CF86431ECD3D0F00888D91 /* ParkItForwardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86421ECD3D0F00888D91 /* ParkItForwardUITests.m */; };
 		EC7EFD6A1ECDB18900852D0D /* ParkingEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFD691ECDB18900852D0D /* ParkingEventModel.m */; };
 		EC7EFD6D1ECDB1A700852D0D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFD6C1ECDB1A700852D0D /* UserModel.m */; };
+		EC7EFD751ECDBBD300852D0D /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFD741ECDBBD300852D0D /* DataProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		EC7EFD691ECDB18900852D0D /* ParkingEventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkingEventModel.m; sourceTree = "<group>"; };
 		EC7EFD6B1ECDB1A700852D0D /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		EC7EFD6C1ECDB1A700852D0D /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		EC7EFD731ECDBBD300852D0D /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
+		EC7EFD741ECDBBD300852D0D /* DataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,7 @@
 		44859AF61ECD47FA00C7DB80 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EC7EFD6E1ECDB8D000852D0D /* Managers */,
 				EC7EFD651ECDB13E00852D0D /* Models */,
 				44859AF71ECD47FA00C7DB80 /* Controllers */,
 				44859AF91ECD47FA00C7DB80 /* Views */,
@@ -331,6 +335,23 @@
 			path = UserModel;
 			sourceTree = "<group>";
 		};
+		EC7EFD6E1ECDB8D000852D0D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFD6F1ECDB8E000852D0D /* Network */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EC7EFD6F1ECDB8E000852D0D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFD731ECDBBD300852D0D /* DataProvider.h */,
+				EC7EFD741ECDBBD300852D0D /* DataProvider.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -521,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7EFD751ECDBBD300852D0D /* DataProvider.m in Sources */,
 				EC7EFD6A1ECDB18900852D0D /* ParkingEventModel.m in Sources */,
 				44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */,
 				EC7EFD6D1ECDB1A700852D0D /* UserModel.m in Sources */,
