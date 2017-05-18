@@ -8,6 +8,8 @@
 
 #import "LogInViewController.h"
 #import "CalendarViewController.h"
+#import "RegistrationViewController.h"
+#import "TodayNavigationViewController.h"
 
 @interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -23,6 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setupUIElements];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,11 +45,13 @@
 #pragma mark - Button Actions
 
 - (IBAction)loginButtonAction:(id)sender {
+    TodayNavigationViewController * registerVC = [[TodayNavigationViewController alloc] init];
+    [self.navigationController pushViewController:registerVC animated:YES];
     
 }
 - (IBAction)registerButtonAction:(id)sender {
-    CalendarViewController * calendarVC = [[CalendarViewController alloc] init];
-    [self.navigationController pushViewController:calendarVC animated:YES];
+    RegistrationViewController * registerVC = [[RegistrationViewController alloc] init];
+    [self.navigationController pushViewController:registerVC animated:YES];
 }
 
 @end
