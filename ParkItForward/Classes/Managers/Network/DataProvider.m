@@ -10,7 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "UserModel.h"
 
-static NSString * const kGetAllUsersPath = @"https://demo0788157.mockable.io/users";
+static NSString * const kGetAllUsersPath = @"https://9ifsk0e0j5.execute-api.ap-southeast-2.amazonaws.com/Testing/users";
 
 @implementation DataProvider
 
@@ -55,37 +55,6 @@ static NSString * const kGetAllUsersPath = @"https://demo0788157.mockable.io/use
     }];
 
 }
-
-
-- (void)getUser:(void (^)(UserModel *user))successBlock
-         failure:(void (^)(NSError* error))failureBlock
-         user:(NSString *)userString{
-    
-    AFHTTPSessionManager * sessionManager = [AFHTTPSessionManager manager];
-    [sessionManager setRequestSerializer:[AFJSONRequestSerializer serializer]];
-    [sessionManager setResponseSerializer:[AFJSONResponseSerializer serializer]];
-    [sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [sessionManager.requestSerializer setTimeoutInterval:30];
-    [sessionManager.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
-    
-    
-    NSString * baseUrl = [[kGetAllUsersPath stringByAppendingString:@"/"] stringByAppendingString:userString];;
-    NSURL * URL = [NSURL URLWithString:baseUrl];
-    __weak typeof(self) weakSelf = self;
-    [sessionManager GET:URL.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSArray * array = [weakSelf parseAllUsers:responseObject];
-        if (successBlock){
-            successBlock (array[0]);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failureBlock){
-            failureBlock(error);
-        }
-    }];
-    
-}
-
 -(NSArray*)parseAllUsers:(id)response{
     NSArray * resValue = nil;
     if (![response isKindOfClass:[NSArray class]]){
@@ -107,7 +76,4 @@ static NSString * const kGetAllUsersPath = @"https://demo0788157.mockable.io/use
     }
     return resValue;
 }
-
-
-
 @end
