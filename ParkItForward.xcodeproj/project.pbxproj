@@ -18,6 +18,8 @@
 		44859B111ECD4EB600C7DB80 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B0F1ECD4EB600C7DB80 /* RegistrationViewController.xib */; };
 		44859B1C1ECD5EE300C7DB80 /* TodayNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B1A1ECD5EE300C7DB80 /* TodayNavigationViewController.m */; };
 		44859B1D1ECD5EE300C7DB80 /* TodayNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B1B1ECD5EE300C7DB80 /* TodayNavigationViewController.xib */; };
+		44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B201ECD5F5F00C7DB80 /* TodayViewController.m */; };
+		44859B231ECD5F5F00C7DB80 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */; };
 		C5CF861F1ECD3D0F00888D91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF861E1ECD3D0F00888D91 /* main.m */; };
 		C5CF86221ECD3D0F00888D91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86211ECD3D0F00888D91 /* AppDelegate.m */; };
 		C5CF86251ECD3D0F00888D91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86241ECD3D0F00888D91 /* ViewController.m */; };
@@ -61,6 +63,9 @@
 		44859B191ECD5EE300C7DB80 /* TodayNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayNavigationViewController.h; sourceTree = "<group>"; };
 		44859B1A1ECD5EE300C7DB80 /* TodayNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayNavigationViewController.m; sourceTree = "<group>"; };
 		44859B1B1ECD5EE300C7DB80 /* TodayNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayNavigationViewController.xib; sourceTree = "<group>"; };
+		44859B1F1ECD5F5F00C7DB80 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		44859B201ECD5F5F00C7DB80 /* TodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
 		704103F30445CBADA89A31F5 /* Pods_ParkItForward.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItForward.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D3C978B4147E192738F787 /* Pods-ParkItForward.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItForward.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkItForward/Pods-ParkItForward.debug.xcconfig"; sourceTree = "<group>"; };
 		C5CF861A1ECD3D0F00888D91 /* ParkItForward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkItForward.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +124,7 @@
 		44859AF71ECD47FA00C7DB80 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				44859B1E1ECD5F5400C7DB80 /* TodayViewController */,
 				44859B181ECD5EE300C7DB80 /* TodayNavigationViewController */,
 				44859B0C1ECD4EAA00C7DB80 /* RegistrationViewController */,
 				44859B061ECD4E8800C7DB80 /* ConfirmationViewController */,
@@ -190,6 +196,16 @@
 				44859B1B1ECD5EE300C7DB80 /* TodayNavigationViewController.xib */,
 			);
 			path = TodayNavigationViewController;
+			sourceTree = "<group>";
+		};
+		44859B1E1ECD5F5400C7DB80 /* TodayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44859B1F1ECD5F5F00C7DB80 /* TodayViewController.h */,
+				44859B201ECD5F5F00C7DB80 /* TodayViewController.m */,
+				44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */,
+			);
+			path = TodayViewController;
 			sourceTree = "<group>";
 		};
 		4656637972FDE7980928932E /* Pods */ = {
@@ -382,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44859B231ECD5F5F00C7DB80 /* TodayViewController.xib in Resources */,
 				44859B1D1ECD5EE300C7DB80 /* TodayNavigationViewController.xib in Resources */,
 				44859B051ECD4E7400C7DB80 /* CalendarViewController.xib in Resources */,
 				44859AFF1ECD48C500C7DB80 /* LogInViewController.xib in Resources */,
@@ -461,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */,
 				44859AFE1ECD48C500C7DB80 /* LogInViewController.m in Sources */,
 				44859B0A1ECD4E9500C7DB80 /* ConfirmationViewController.m in Sources */,
 				44859B1C1ECD5EE300C7DB80 /* TodayNavigationViewController.m in Sources */,
