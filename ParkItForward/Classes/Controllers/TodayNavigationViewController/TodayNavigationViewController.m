@@ -13,6 +13,7 @@
 @interface TodayNavigationViewController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) TodayViewController * todayVC;
 
 
 
@@ -35,9 +36,10 @@
     [self removeCurrentContent];
     if (self.segmentControl.selectedSegmentIndex == 0){
         self.contentView.backgroundColor = [UIColor redColor];
-        TodayViewController * todayVC = [[TodayViewController alloc] init];
-        [self.contentView addSubview:todayVC.view];
-        [todayVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        self.todayVC = [[TodayViewController alloc] init];
+        [self addChildViewController:self.todayVC];
+        [self.contentView addSubview:self.todayVC.view];
+        [self.todayVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);
         }];
     }else {
@@ -48,6 +50,7 @@
     
     for (UIView * currentView in self.contentView.subviews){
         [currentView removeFromSuperview];
+        [self.todayVC removeFromParentViewController];
     }
 }
 - (IBAction)backButtonPressed:(id)sender {

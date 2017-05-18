@@ -20,6 +20,8 @@
 		44859B1D1ECD5EE300C7DB80 /* TodayNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B1B1ECD5EE300C7DB80 /* TodayNavigationViewController.xib */; };
 		44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B201ECD5F5F00C7DB80 /* TodayViewController.m */; };
 		44859B231ECD5F5F00C7DB80 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */; };
+		C55A08F11ECD702500EA09E3 /* TodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C55A08EF1ECD702500EA09E3 /* TodayCell.m */; };
+		C55A08F21ECD702500EA09E3 /* TodayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55A08F01ECD702500EA09E3 /* TodayCell.xib */; };
 		C5CF861F1ECD3D0F00888D91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF861E1ECD3D0F00888D91 /* main.m */; };
 		C5CF86221ECD3D0F00888D91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86211ECD3D0F00888D91 /* AppDelegate.m */; };
 		C5CF86251ECD3D0F00888D91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86241ECD3D0F00888D91 /* ViewController.m */; };
@@ -68,6 +70,9 @@
 		44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
 		704103F30445CBADA89A31F5 /* Pods_ParkItForward.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItForward.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D3C978B4147E192738F787 /* Pods-ParkItForward.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItForward.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkItForward/Pods-ParkItForward.debug.xcconfig"; sourceTree = "<group>"; };
+		C55A08EE1ECD702500EA09E3 /* TodayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayCell.h; path = Cells/TodayCell.h; sourceTree = "<group>"; };
+		C55A08EF1ECD702500EA09E3 /* TodayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TodayCell.m; path = Cells/TodayCell.m; sourceTree = "<group>"; };
+		C55A08F01ECD702500EA09E3 /* TodayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TodayCell.xib; path = Cells/TodayCell.xib; sourceTree = "<group>"; };
 		C5CF861A1ECD3D0F00888D91 /* ParkItForward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkItForward.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CF861E1ECD3D0F00888D91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5CF86201ECD3D0F00888D91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +149,7 @@
 		44859AF91ECD47FA00C7DB80 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C55A08E11ECD6D2E00EA09E3 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +229,16 @@
 				704103F30445CBADA89A31F5 /* Pods_ParkItForward.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C55A08E11ECD6D2E00EA09E3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C55A08EE1ECD702500EA09E3 /* TodayCell.h */,
+				C55A08EF1ECD702500EA09E3 /* TodayCell.m */,
+				C55A08F01ECD702500EA09E3 /* TodayCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		C5CF86111ECD3D0F00888D91 = {
@@ -404,6 +420,7 @@
 				44859AFF1ECD48C500C7DB80 /* LogInViewController.xib in Resources */,
 				C5CF862D1ECD3D0F00888D91 /* LaunchScreen.storyboard in Resources */,
 				44859B111ECD4EB600C7DB80 /* RegistrationViewController.xib in Resources */,
+				C55A08F21ECD702500EA09E3 /* TodayCell.xib in Resources */,
 				44859B0B1ECD4E9500C7DB80 /* ConfirmationViewController.xib in Resources */,
 				C5CF862A1ECD3D0F00888D91 /* Assets.xcassets in Resources */,
 			);
@@ -481,6 +498,7 @@
 				44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */,
 				44859AFE1ECD48C500C7DB80 /* LogInViewController.m in Sources */,
 				44859B0A1ECD4E9500C7DB80 /* ConfirmationViewController.m in Sources */,
+				C55A08F11ECD702500EA09E3 /* TodayCell.m in Sources */,
 				44859B1C1ECD5EE300C7DB80 /* TodayNavigationViewController.m in Sources */,
 				C5CF86251ECD3D0F00888D91 /* ViewController.m in Sources */,
 				C5CF86221ECD3D0F00888D91 /* AppDelegate.m in Sources */,
