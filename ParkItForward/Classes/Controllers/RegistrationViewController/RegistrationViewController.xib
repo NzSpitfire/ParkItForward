@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,9 +16,97 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ewg-Bd-8Ar">
+                    <rect key="frame" x="30" y="193.5" width="260" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lf-5X-r86">
+                    <rect key="frame" x="30" y="309.5" width="260" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YWw-aq-cUN">
+                    <rect key="frame" x="30" y="359.5" width="260" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="&lt;yourname&gt;@foxsports.com.au" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jD5-gt-FGo">
+                    <rect key="frame" x="30" y="133.5" width="260" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBk-nh-AIn">
+                    <rect key="frame" x="30" y="102.5" width="46.5" height="21"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDM-Rh-0Pj">
+                    <rect key="frame" x="30" y="162.5" width="74" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foxsports_logo" translatesAutoresizingMaskIntoConstraints="NO" id="NFk-Gr-LBE">
+                    <rect key="frame" x="120" y="30" width="80" height="48"/>
+                </imageView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jpy-xN-THd">
+                    <rect key="frame" x="241" y="243.5" width="51" height="31"/>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbz-Ki-7d7">
+                    <rect key="frame" x="175.5" y="248.5" width="50.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ox5-1X-WIa">
+                    <rect key="frame" x="30" y="409.5" width="260" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.28680245539999999" green="0.52912946429999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YWw-aq-cUN" firstAttribute="leading" secondItem="8lf-5X-r86" secondAttribute="leading" id="1CA-9A-pGE"/>
+                <constraint firstItem="Ewg-Bd-8Ar" firstAttribute="top" secondItem="DDM-Rh-0Pj" secondAttribute="bottom" constant="10" id="1NU-Gw-qgn"/>
+                <constraint firstItem="Ewg-Bd-8Ar" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="1WW-yj-ZLA"/>
+                <constraint firstItem="UBk-nh-AIn" firstAttribute="top" secondItem="NFk-Gr-LBE" secondAttribute="bottom" constant="24.5" id="3vK-0T-Wwr"/>
+                <constraint firstItem="NFk-Gr-LBE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7KY-xU-dU5"/>
+                <constraint firstItem="jD5-gt-FGo" firstAttribute="top" secondItem="UBk-nh-AIn" secondAttribute="bottom" constant="10" id="Ajd-ti-R7k"/>
+                <constraint firstItem="Jpy-xN-THd" firstAttribute="trailing" secondItem="Ewg-Bd-8Ar" secondAttribute="trailing" id="Fi8-8Y-7Hq"/>
+                <constraint firstItem="8lf-5X-r86" firstAttribute="width" secondItem="Ewg-Bd-8Ar" secondAttribute="width" id="FwM-0J-2sb"/>
+                <constraint firstItem="Ox5-1X-WIa" firstAttribute="leading" secondItem="YWw-aq-cUN" secondAttribute="leading" id="JU5-wS-hZN"/>
+                <constraint firstItem="Ewg-Bd-8Ar" firstAttribute="top" secondItem="jD5-gt-FGo" secondAttribute="bottom" constant="30" id="Ra3-f0-M1m"/>
+                <constraint firstItem="8lf-5X-r86" firstAttribute="leading" secondItem="Ewg-Bd-8Ar" secondAttribute="leading" id="Rk6-pl-0zx"/>
+                <constraint firstItem="NFk-Gr-LBE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="SOl-7y-ZQe"/>
+                <constraint firstItem="Ox5-1X-WIa" firstAttribute="width" secondItem="Ewg-Bd-8Ar" secondAttribute="width" id="UIo-Pf-cd3"/>
+                <constraint firstItem="Jpy-xN-THd" firstAttribute="top" secondItem="Ewg-Bd-8Ar" secondAttribute="bottom" constant="20" id="af3-Re-JMm"/>
+                <constraint firstItem="Ewg-Bd-8Ar" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bSo-GV-rfd"/>
+                <constraint firstItem="8lf-5X-r86" firstAttribute="top" secondItem="Jpy-xN-THd" secondAttribute="bottom" constant="35" id="bvc-vP-FgH"/>
+                <constraint firstItem="YWw-aq-cUN" firstAttribute="width" secondItem="Ewg-Bd-8Ar" secondAttribute="width" id="hY0-SM-be8"/>
+                <constraint firstItem="jD5-gt-FGo" firstAttribute="leading" secondItem="Ewg-Bd-8Ar" secondAttribute="leading" id="iy5-B0-DBJ"/>
+                <constraint firstItem="UBk-nh-AIn" firstAttribute="leading" secondItem="Ewg-Bd-8Ar" secondAttribute="leading" id="o5c-Gs-gts"/>
+                <constraint firstItem="YWw-aq-cUN" firstAttribute="top" secondItem="8lf-5X-r86" secondAttribute="bottom" constant="20" id="oRz-nZ-uaJ"/>
+                <constraint firstItem="Jpy-xN-THd" firstAttribute="leading" secondItem="bbz-Ki-7d7" secondAttribute="trailing" constant="15" id="qG9-Jh-8Px"/>
+                <constraint firstItem="bbz-Ki-7d7" firstAttribute="centerY" secondItem="Jpy-xN-THd" secondAttribute="centerY" id="slZ-fJ-9e1"/>
+                <constraint firstItem="DDM-Rh-0Pj" firstAttribute="leading" secondItem="Ewg-Bd-8Ar" secondAttribute="leading" id="t6H-0y-GRv"/>
+                <constraint firstItem="jD5-gt-FGo" firstAttribute="width" secondItem="Ewg-Bd-8Ar" secondAttribute="width" id="yx3-bs-Nqm"/>
+                <constraint firstItem="Ox5-1X-WIa" firstAttribute="top" secondItem="YWw-aq-cUN" secondAttribute="bottom" constant="20" id="zcU-jN-DNw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="foxsports_logo" width="80" height="48"/>
+    </resources>
 </document>

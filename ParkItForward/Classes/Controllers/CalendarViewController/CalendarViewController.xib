@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController">
             <connections>
+                <outlet property="calendarView" destination="PCe-tZ-BD5" id="PcO-OS-wZP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +19,34 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCe-tZ-BD5" customClass="FSCalendar">
+                    <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="0Cc-ut-VTP"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="8zp-6r-lJe"/>
+                        <outlet property="delegate" destination="-1" id="QXl-wY-0iM"/>
+                    </connections>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bRY-V4-5td">
+                    <rect key="frame" x="0.0" y="314" width="375" height="353"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PCe-tZ-BD5" secondAttribute="trailing" id="LH3-0R-Moq"/>
+                <constraint firstAttribute="bottom" secondItem="bRY-V4-5td" secondAttribute="bottom" id="N4J-7w-Doj"/>
+                <constraint firstItem="bRY-V4-5td" firstAttribute="top" secondItem="PCe-tZ-BD5" secondAttribute="bottom" id="eNq-bI-0L5"/>
+                <constraint firstItem="PCe-tZ-BD5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hBI-LZ-TC0"/>
+                <constraint firstItem="bRY-V4-5td" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lFf-1F-jhY"/>
+                <constraint firstAttribute="trailing" secondItem="bRY-V4-5td" secondAttribute="trailing" id="lPs-o0-aOb"/>
+                <constraint firstItem="PCe-tZ-BD5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="z6S-dg-odX"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
     </objects>
 </document>

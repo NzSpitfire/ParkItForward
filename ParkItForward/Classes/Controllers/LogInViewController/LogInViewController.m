@@ -7,6 +7,7 @@
 //
 
 #import "LogInViewController.h"
+#import "CalendarViewController.h"
 
 @interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -44,6 +45,8 @@
     
 }
 - (IBAction)registerButtonAction:(id)sender {
+    CalendarViewController * calendarVC = [[CalendarViewController alloc] init];
+    [self.navigationController pushViewController:calendarVC animated:YES];
 }
 
 @end

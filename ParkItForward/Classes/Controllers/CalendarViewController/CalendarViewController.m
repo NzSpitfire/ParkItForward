@@ -7,8 +7,10 @@
 //
 
 #import "CalendarViewController.h"
+#import "FSCalendar.h"
 
 @interface CalendarViewController ()
+@property (weak, nonatomic) IBOutlet FSCalendar *calendarView;
 
 @end
 

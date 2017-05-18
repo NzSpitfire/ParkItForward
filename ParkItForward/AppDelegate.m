@@ -21,7 +21,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     LogInViewController * loginVC = [[LogInViewController  alloc] init];
-    self.window.rootViewController = loginVC;
+    UINavigationController * navViewController = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    self.window.rootViewController = navViewController;
     [self.window makeKeyAndVisible];
     
     return YES;
