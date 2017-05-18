@@ -32,6 +32,7 @@
 		EC7EFD6A1ECDB18900852D0D /* ParkingEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFD691ECDB18900852D0D /* ParkingEventModel.m */; };
 		EC7EFD6D1ECDB1A700852D0D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFD6C1ECDB1A700852D0D /* UserModel.m */; };
 		EC7EFD751ECDBBD300852D0D /* DataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFD741ECDBBD300852D0D /* DataProvider.m */; };
+		EC7EFD7D1ECDC91E00852D0D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFD7C1ECDC91E00852D0D /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		EC7EFD6C1ECDB1A700852D0D /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		EC7EFD731ECDBBD300852D0D /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
 		EC7EFD741ECDBBD300852D0D /* DataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataProvider.m; sourceTree = "<group>"; };
+		EC7EFD7B1ECDC91E00852D0D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		EC7EFD7C1ECDC91E00852D0D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,7 @@
 		44859AF71ECD47FA00C7DB80 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EC7EFD7A1ECDC87A00852D0D /* BaseViewController */,
 				44859B1E1ECD5F5400C7DB80 /* TodayViewController */,
 				44859B181ECD5EE300C7DB80 /* TodayNavigationViewController */,
 				44859B0C1ECD4EAA00C7DB80 /* RegistrationViewController */,
@@ -352,6 +356,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		EC7EFD7A1ECDC87A00852D0D /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFD7B1ECDC91E00852D0D /* BaseViewController.h */,
+				EC7EFD7C1ECDC91E00852D0D /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -547,6 +560,7 @@
 				44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */,
 				EC7EFD6D1ECDB1A700852D0D /* UserModel.m in Sources */,
 				44859AFE1ECD48C500C7DB80 /* LogInViewController.m in Sources */,
+				EC7EFD7D1ECDC91E00852D0D /* BaseViewController.m in Sources */,
 				44859B0A1ECD4E9500C7DB80 /* ConfirmationViewController.m in Sources */,
 				C55A08F11ECD702500EA09E3 /* TodayCell.m in Sources */,
 				44859B1C1ECD5EE300C7DB80 /* TodayNavigationViewController.m in Sources */,

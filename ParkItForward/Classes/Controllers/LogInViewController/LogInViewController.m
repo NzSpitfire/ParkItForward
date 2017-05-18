@@ -10,6 +10,8 @@
 #import "CalendarViewController.h"
 #import "RegistrationViewController.h"
 #import "TodayNavigationViewController.h"
+#import "DataProvider.h"
+
 
 @interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -25,7 +27,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setupUIElements];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,22 +37,39 @@
 -(void)setupUIElements{
     self.loginButton.layer.borderColor = [UIColor blackColor].CGColor;
     self.loginButton.layer.borderWidth = 1.0f;
-    self.loginButton.layer.cornerRadius = 5.0f;
-    
-    self.registerButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.registerButton.layer.borderWidth = 1.0f;
-    self.registerButton.layer.cornerRadius = 5.0f;
+    self.loginButton.backgroundColor = [UIColor blackColor];
 }
 #pragma mark - Button Actions
 
 - (IBAction)loginButtonAction:(id)sender {
-    TodayNavigationViewController * registerVC = [[TodayNavigationViewController alloc] init];
-    [self.navigationController pushViewController:registerVC animated:YES];
+    
+    if (self.loginTextField.text.length==0 ||
+        self.passwordTextField.text.length == 0){
+        NSLog(@"not enaough data to continue");
+      //  return;
+    }
+     [self showSpinner];
+    [self performSelector:@selector(proceedUserAuthorization) withObject:nil afterDelay:5];
+ 
+    
+  //  TodayNavigationViewController * registerVC = [[TodayNavigationViewController alloc] init];
+  //  [self.navigationController pushViewController:registerVC animated:YES];
     
 }
 - (IBAction)registerButtonAction:(id)sender {
     RegistrationViewController * registerVC = [[RegistrationViewController alloc] init];
     [self.navigationController pushViewController:registerVC animated:YES];
 }
+-(void)proceedUserAuthorization{
+   // [self showSpinner];
+    __weak typeof(self) weakSelf = self;
+    [[DataProvider sharedInstance] getUsers:^(NSArray *users){
+        [weakSelf hideSpinner];
+        TodayNavigationViewController * registerVC = [[TodayNavigationViewController alloc] init];
+        [weakSelf.navigationController pushViewController:registerVC animated:YES];
 
+    }failure:^(NSError * error){
+        [weakSelf hideSpinner];
+    }];
+}
 @end
