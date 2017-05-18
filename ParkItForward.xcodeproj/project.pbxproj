@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0A60BC2EC39F2232188B24 /* Pods_ParkItForward.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704103F30445CBADA89A31F5 /* Pods_ParkItForward.framework */; };
+		44859AFE1ECD48C500C7DB80 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859AFC1ECD48C500C7DB80 /* LogInViewController.m */; };
+		44859AFF1ECD48C500C7DB80 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859AFD1ECD48C500C7DB80 /* LogInViewController.xib */; };
+		44859B041ECD4E7400C7DB80 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B021ECD4E7400C7DB80 /* CalendarViewController.m */; };
+		44859B051ECD4E7400C7DB80 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B031ECD4E7400C7DB80 /* CalendarViewController.xib */; };
+		44859B0A1ECD4E9500C7DB80 /* ConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B081ECD4E9500C7DB80 /* ConfirmationViewController.m */; };
+		44859B0B1ECD4E9500C7DB80 /* ConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B091ECD4E9500C7DB80 /* ConfirmationViewController.xib */; };
+		44859B101ECD4EB600C7DB80 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B0E1ECD4EB600C7DB80 /* RegistrationViewController.m */; };
+		44859B111ECD4EB600C7DB80 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B0F1ECD4EB600C7DB80 /* RegistrationViewController.xib */; };
 		C5CF861F1ECD3D0F00888D91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF861E1ECD3D0F00888D91 /* main.m */; };
 		C5CF86221ECD3D0F00888D91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86211ECD3D0F00888D91 /* AppDelegate.m */; };
 		C5CF86251ECD3D0F00888D91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86241ECD3D0F00888D91 /* ViewController.m */; };
-		C5CF86281ECD3D0F00888D91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CF86261ECD3D0F00888D91 /* Main.storyboard */; };
 		C5CF862A1ECD3D0F00888D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CF86291ECD3D0F00888D91 /* Assets.xcassets */; };
 		C5CF862D1ECD3D0F00888D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CF862B1ECD3D0F00888D91 /* LaunchScreen.storyboard */; };
 		C5CF86381ECD3D0F00888D91 /* ParkItForwardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86371ECD3D0F00888D91 /* ParkItForwardTests.m */; };
@@ -35,13 +43,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04E970432C10C491132BCFAB /* Pods-ParkItForward.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItForward.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkItForward/Pods-ParkItForward.release.xcconfig"; sourceTree = "<group>"; };
+		44859AFB1ECD48C500C7DB80 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		44859AFC1ECD48C500C7DB80 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		44859AFD1ECD48C500C7DB80 /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		44859B011ECD4E7400C7DB80 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		44859B021ECD4E7400C7DB80 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		44859B031ECD4E7400C7DB80 /* CalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		44859B071ECD4E9500C7DB80 /* ConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmationViewController.h; sourceTree = "<group>"; };
+		44859B081ECD4E9500C7DB80 /* ConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmationViewController.m; sourceTree = "<group>"; };
+		44859B091ECD4E9500C7DB80 /* ConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmationViewController.xib; sourceTree = "<group>"; };
+		44859B0D1ECD4EB600C7DB80 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		44859B0E1ECD4EB600C7DB80 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		44859B0F1ECD4EB600C7DB80 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		704103F30445CBADA89A31F5 /* Pods_ParkItForward.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItForward.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3D3C978B4147E192738F787 /* Pods-ParkItForward.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItForward.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkItForward/Pods-ParkItForward.debug.xcconfig"; sourceTree = "<group>"; };
 		C5CF861A1ECD3D0F00888D91 /* ParkItForward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkItForward.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CF861E1ECD3D0F00888D91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5CF86201ECD3D0F00888D91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5CF86211ECD3D0F00888D91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C5CF86231ECD3D0F00888D91 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C5CF86241ECD3D0F00888D91 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C5CF86271ECD3D0F00888D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5CF86291ECD3D0F00888D91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5CF862C1ECD3D0F00888D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5CF862E1ECD3D0F00888D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F0A60BC2EC39F2232188B24 /* Pods_ParkItForward.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +101,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44859AF61ECD47FA00C7DB80 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				44859AF71ECD47FA00C7DB80 /* Controllers */,
+				44859AF81ECD47FA00C7DB80 /* Models */,
+				44859AF91ECD47FA00C7DB80 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		44859AF71ECD47FA00C7DB80 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				44859B0C1ECD4EAA00C7DB80 /* RegistrationViewController */,
+				44859B061ECD4E8800C7DB80 /* ConfirmationViewController */,
+				44859B001ECD4E6500C7DB80 /* CalendarViewController */,
+				44859AFA1ECD48AE00C7DB80 /* LogInViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		44859AF81ECD47FA00C7DB80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44859AF91ECD47FA00C7DB80 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44859AFA1ECD48AE00C7DB80 /* LogInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44859AFB1ECD48C500C7DB80 /* LogInViewController.h */,
+				44859AFC1ECD48C500C7DB80 /* LogInViewController.m */,
+				44859AFD1ECD48C500C7DB80 /* LogInViewController.xib */,
+			);
+			path = LogInViewController;
+			sourceTree = "<group>";
+		};
+		44859B001ECD4E6500C7DB80 /* CalendarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44859B011ECD4E7400C7DB80 /* CalendarViewController.h */,
+				44859B021ECD4E7400C7DB80 /* CalendarViewController.m */,
+				44859B031ECD4E7400C7DB80 /* CalendarViewController.xib */,
+			);
+			path = CalendarViewController;
+			sourceTree = "<group>";
+		};
+		44859B061ECD4E8800C7DB80 /* ConfirmationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44859B071ECD4E9500C7DB80 /* ConfirmationViewController.h */,
+				44859B081ECD4E9500C7DB80 /* ConfirmationViewController.m */,
+				44859B091ECD4E9500C7DB80 /* ConfirmationViewController.xib */,
+			);
+			path = ConfirmationViewController;
+			sourceTree = "<group>";
+		};
+		44859B0C1ECD4EAA00C7DB80 /* RegistrationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44859B0D1ECD4EB600C7DB80 /* RegistrationViewController.h */,
+				44859B0E1ECD4EB600C7DB80 /* RegistrationViewController.m */,
+				44859B0F1ECD4EB600C7DB80 /* RegistrationViewController.xib */,
+			);
+			path = RegistrationViewController;
+			sourceTree = "<group>";
+		};
+		4656637972FDE7980928932E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3D3C978B4147E192738F787 /* Pods-ParkItForward.debug.xcconfig */,
+				04E970432C10C491132BCFAB /* Pods-ParkItForward.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5CA3C9236C51AEB35469346D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				704103F30445CBADA89A31F5 /* Pods_ParkItForward.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5CF86111ECD3D0F00888D91 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +200,8 @@
 				C5CF86361ECD3D0F00888D91 /* ParkItForwardTests */,
 				C5CF86411ECD3D0F00888D91 /* ParkItForwardUITests */,
 				C5CF861B1ECD3D0F00888D91 /* Products */,
+				4656637972FDE7980928932E /* Pods */,
+				5CA3C9236C51AEB35469346D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +218,11 @@
 		C5CF861C1ECD3D0F00888D91 /* ParkItForward */ = {
 			isa = PBXGroup;
 			children = (
+				44859AF61ECD47FA00C7DB80 /* Classes */,
 				C5CF86201ECD3D0F00888D91 /* AppDelegate.h */,
 				C5CF86211ECD3D0F00888D91 /* AppDelegate.m */,
 				C5CF86231ECD3D0F00888D91 /* ViewController.h */,
 				C5CF86241ECD3D0F00888D91 /* ViewController.m */,
-				C5CF86261ECD3D0F00888D91 /* Main.storyboard */,
 				C5CF86291ECD3D0F00888D91 /* Assets.xcassets */,
 				C5CF862B1ECD3D0F00888D91 /* LaunchScreen.storyboard */,
 				C5CF862E1ECD3D0F00888D91 /* Info.plist */,
@@ -147,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5CF86471ECD3D0F00888D91 /* Build configuration list for PBXNativeTarget "ParkItForward" */;
 			buildPhases = (
+				DBE1B5D45159C85AB7EECD7A /* [CP] Check Pods Manifest.lock */,
 				C5CF86161ECD3D0F00888D91 /* Sources */,
 				C5CF86171ECD3D0F00888D91 /* Frameworks */,
 				C5CF86181ECD3D0F00888D91 /* Resources */,
+				2F0DF11FB8AA5C0DD1900802 /* [CP] Embed Pods Frameworks */,
+				5BF5D84A07EF7B7CE5B1246C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,9 +366,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44859B051ECD4E7400C7DB80 /* CalendarViewController.xib in Resources */,
+				44859AFF1ECD48C500C7DB80 /* LogInViewController.xib in Resources */,
 				C5CF862D1ECD3D0F00888D91 /* LaunchScreen.storyboard in Resources */,
+				44859B111ECD4EB600C7DB80 /* RegistrationViewController.xib in Resources */,
+				44859B0B1ECD4E9500C7DB80 /* ConfirmationViewController.xib in Resources */,
 				C5CF862A1ECD3D0F00888D91 /* Assets.xcassets in Resources */,
-				C5CF86281ECD3D0F00888D91 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,14 +391,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F0DF11FB8AA5C0DD1900802 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkItForward/Pods-ParkItForward-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BF5D84A07EF7B7CE5B1246C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParkItForward/Pods-ParkItForward-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE1B5D45159C85AB7EECD7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C5CF86161ECD3D0F00888D91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44859AFE1ECD48C500C7DB80 /* LogInViewController.m in Sources */,
+				44859B0A1ECD4E9500C7DB80 /* ConfirmationViewController.m in Sources */,
 				C5CF86251ECD3D0F00888D91 /* ViewController.m in Sources */,
 				C5CF86221ECD3D0F00888D91 /* AppDelegate.m in Sources */,
+				44859B041ECD4E7400C7DB80 /* CalendarViewController.m in Sources */,
 				C5CF861F1ECD3D0F00888D91 /* main.m in Sources */,
+				44859B101ECD4EB600C7DB80 /* RegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +486,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C5CF86261ECD3D0F00888D91 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C5CF86271ECD3D0F00888D91 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C5CF862B1ECD3D0F00888D91 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -422,6 +589,7 @@
 		};
 		C5CF86481ECD3D0F00888D91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3D3C978B4147E192738F787 /* Pods-ParkItForward.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ParkItForward/Info.plist;
@@ -433,6 +601,7 @@
 		};
 		C5CF86491ECD3D0F00888D91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04E970432C10C491132BCFAB /* Pods-ParkItForward.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ParkItForward/Info.plist;
@@ -507,6 +676,7 @@
 				C5CF86491ECD3D0F00888D91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5CF864A1ECD3D0F00888D91 /* Build configuration list for PBXNativeTarget "ParkItForwardTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +685,7 @@
 				C5CF864C1ECD3D0F00888D91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5CF864D1ECD3D0F00888D91 /* Build configuration list for PBXNativeTarget "ParkItForwardUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +694,7 @@
 				C5CF864F1ECD3D0F00888D91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
