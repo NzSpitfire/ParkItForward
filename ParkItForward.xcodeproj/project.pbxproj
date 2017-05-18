@@ -29,6 +29,8 @@
 		C5CF862D1ECD3D0F00888D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CF862B1ECD3D0F00888D91 /* LaunchScreen.storyboard */; };
 		C5CF86381ECD3D0F00888D91 /* ParkItForwardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86371ECD3D0F00888D91 /* ParkItForwardTests.m */; };
 		C5CF86431ECD3D0F00888D91 /* ParkItForwardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF86421ECD3D0F00888D91 /* ParkItForwardUITests.m */; };
+		EC7EFD6A1ECDB18900852D0D /* ParkingEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFD691ECDB18900852D0D /* ParkingEventModel.m */; };
+		EC7EFD6D1ECDB1A700852D0D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFD6C1ECDB1A700852D0D /* UserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,10 @@
 		C5CF863E1ECD3D0F00888D91 /* ParkItForwardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParkItForwardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CF86421ECD3D0F00888D91 /* ParkItForwardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParkItForwardUITests.m; sourceTree = "<group>"; };
 		C5CF86441ECD3D0F00888D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC7EFD681ECDB18900852D0D /* ParkingEventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParkingEventModel.h; sourceTree = "<group>"; };
+		EC7EFD691ECDB18900852D0D /* ParkingEventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkingEventModel.m; sourceTree = "<group>"; };
+		EC7EFD6B1ECDB1A700852D0D /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		EC7EFD6C1ECDB1A700852D0D /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +125,8 @@
 		44859AF61ECD47FA00C7DB80 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EC7EFD651ECDB13E00852D0D /* Models */,
 				44859AF71ECD47FA00C7DB80 /* Controllers */,
-				44859AF81ECD47FA00C7DB80 /* Models */,
 				44859AF91ECD47FA00C7DB80 /* Views */,
 			);
 			path = Classes;
@@ -137,13 +143,6 @@
 				44859AFA1ECD48AE00C7DB80 /* LogInViewController */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		44859AF81ECD47FA00C7DB80 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		44859AF91ECD47FA00C7DB80 /* Views */ = {
@@ -303,6 +302,33 @@
 				C5CF86441ECD3D0F00888D91 /* Info.plist */,
 			);
 			path = ParkItForwardUITests;
+			sourceTree = "<group>";
+		};
+		EC7EFD651ECDB13E00852D0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFD661ECDB16900852D0D /* ParkingEventModel */,
+				EC7EFD671ECDB16900852D0D /* UserModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC7EFD661ECDB16900852D0D /* ParkingEventModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFD681ECDB18900852D0D /* ParkingEventModel.h */,
+				EC7EFD691ECDB18900852D0D /* ParkingEventModel.m */,
+			);
+			path = ParkingEventModel;
+			sourceTree = "<group>";
+		};
+		EC7EFD671ECDB16900852D0D /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC7EFD6B1ECDB1A700852D0D /* UserModel.h */,
+				EC7EFD6C1ECDB1A700852D0D /* UserModel.m */,
+			);
+			path = UserModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,7 +511,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -495,7 +521,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7EFD6A1ECDB18900852D0D /* ParkingEventModel.m in Sources */,
 				44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */,
+				EC7EFD6D1ECDB1A700852D0D /* UserModel.m in Sources */,
 				44859AFE1ECD48C500C7DB80 /* LogInViewController.m in Sources */,
 				44859B0A1ECD4E9500C7DB80 /* ConfirmationViewController.m in Sources */,
 				C55A08F11ECD702500EA09E3 /* TodayCell.m in Sources */,
