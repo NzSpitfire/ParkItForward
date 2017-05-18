@@ -45,8 +45,8 @@
     
     if (self.loginTextField.text.length==0 ||
         self.passwordTextField.text.length == 0){
-        NSLog(@"not enaough data to continue");
-      //  return;
+        [self showAlertEmptyFields];
+        return;
     }
      [self showSpinner];
     [self performSelector:@selector(proceedUserAuthorization) withObject:nil afterDelay:5];
@@ -71,5 +71,25 @@
     }failure:^(NSError * error){
         [weakSelf hideSpinner];
     }];
+}
+-(void) showAlertEmptyFields{
+    NSString * alertMessage = @"Email or password cannot be empty";
+    NSString * alertTitle = @"Error";
+    __weak typeof(self) weakSelf = self;
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:alertTitle
+                                          message:alertMessage
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * okAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction * action){
+                                                          weakSelf.loginTextField.text = @"";
+                                                          weakSelf.passwordTextField.text = @"";
+                                                          [weakSelf.loginTextField becomeFirstResponder];
+                                                          
+                                                      }];
+    [alertController addAction:okAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 @end
