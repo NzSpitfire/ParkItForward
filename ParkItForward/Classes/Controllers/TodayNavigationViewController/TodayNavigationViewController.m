@@ -60,7 +60,7 @@
 }
 
 -(void)presentCalendar{
-    CalendarViewController  * controller = [[CalendarViewController alloc] init];
+    CalendarViewController  * controller = [[CalendarViewController alloc] initWithDelegate:self];
     [self.navigationController pushViewController:controller  animated:YES];
 }
 -(void)presentConfirmationScreen:(ParkingEventModel*)model{

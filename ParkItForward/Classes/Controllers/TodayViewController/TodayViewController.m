@@ -145,8 +145,6 @@ static NSString *cellIdentifier = @"TodayCell";
     if ([self.delegate respondsToSelector:@selector(presentConfirmationScreen:)]){
         [self.delegate presentConfirmationScreen:model];
     }
-    
-    
 }
 - (IBAction)calendarBiuttonPressed:(id)sender {
     if ([self.delegate respondsToSelector:@selector(presentCalendar)]){

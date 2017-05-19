@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LogInViewController.h"
+#import "TodayNavigationViewController.h"
 
 @interface AppDelegate ()
 
@@ -55,5 +56,30 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)presentTodayController{
+    TodayNavigationViewController * todayVC = [[TodayNavigationViewController alloc] init];
+    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:todayVC];
+    [self changeRootViewController:navController];
+}
 
+- (void)changeRootViewController:(UIViewController*)viewController {
+    
+    if (!self.window.rootViewController) {
+        self.window.rootViewController = viewController;
+        return;
+    }
+    
+    UIView *snapShot = [self.window snapshotViewAfterScreenUpdates:YES];
+    
+    [viewController.view addSubview:snapShot];
+    
+    self.window.rootViewController = viewController;
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        snapShot.layer.opacity = 0;
+        snapShot.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5);
+    } completion:^(BOOL finished) {
+        [snapShot removeFromSuperview];
+    }];
+}
 @end

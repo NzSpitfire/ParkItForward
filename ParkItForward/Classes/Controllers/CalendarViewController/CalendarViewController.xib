@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController">
             <connections>
+                <outlet property="backButton" destination="llC-C9-e8X" id="tfo-42-B0u"/>
                 <outlet property="calendarView" destination="PCe-tZ-BD5" id="PcO-OS-wZP"/>
+                <outlet property="tableView" destination="bRY-V4-5td" id="BRk-g5-Zgi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,6 +36,10 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bRY-V4-5td">
                     <rect key="frame" x="0.0" y="314" width="375" height="353"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="oc5-zp-I8y"/>
+                        <outlet property="delegate" destination="-1" id="Cs8-44-IMb"/>
+                    </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llC-C9-e8X">
                     <rect key="frame" x="16" y="20" width="46" height="30"/>

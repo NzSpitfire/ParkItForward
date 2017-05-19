@@ -21,6 +21,7 @@
 		44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B201ECD5F5F00C7DB80 /* TodayViewController.m */; };
 		44859B231ECD5F5F00C7DB80 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */; };
 		44859B2D1ECE60E500C7DB80 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B2C1ECE60E500C7DB80 /* ColorHelper.m */; };
+		44859B321ECE828900C7DB80 /* UserProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B311ECE828900C7DB80 /* UserProvider.m */; };
 		C55A08F11ECD702500EA09E3 /* TodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C55A08EF1ECD702500EA09E3 /* TodayCell.m */; };
 		C55A08F21ECD702500EA09E3 /* TodayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55A08F01ECD702500EA09E3 /* TodayCell.xib */; };
 		C5CF861F1ECD3D0F00888D91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF861E1ECD3D0F00888D91 /* main.m */; };
@@ -74,6 +75,8 @@
 		44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
 		44859B2B1ECE60E500C7DB80 /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHelper.h; sourceTree = "<group>"; };
 		44859B2C1ECE60E500C7DB80 /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHelper.m; sourceTree = "<group>"; };
+		44859B301ECE828900C7DB80 /* UserProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProvider.h; sourceTree = "<group>"; };
+		44859B311ECE828900C7DB80 /* UserProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProvider.m; sourceTree = "<group>"; };
 		704103F30445CBADA89A31F5 /* Pods_ParkItForward.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItForward.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D3C978B4147E192738F787 /* Pods-ParkItForward.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItForward.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkItForward/Pods-ParkItForward.debug.xcconfig"; sourceTree = "<group>"; };
 		C55A08EE1ECD702500EA09E3 /* TodayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayCell.h; path = Cells/TodayCell.h; sourceTree = "<group>"; };
@@ -246,6 +249,15 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		44859B2F1ECE827A00C7DB80 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				44859B301ECE828900C7DB80 /* UserProvider.h */,
+				44859B311ECE828900C7DB80 /* UserProvider.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		4656637972FDE7980928932E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +379,7 @@
 		EC7EFD6E1ECDB8D000852D0D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				44859B2F1ECE827A00C7DB80 /* User */,
 				EC7EFD6F1ECDB8E000852D0D /* Network */,
 			);
 			path = Managers;
@@ -580,6 +593,7 @@
 				44859B0A1ECD4E9500C7DB80 /* ConfirmationViewController.m in Sources */,
 				C55A08F11ECD702500EA09E3 /* TodayCell.m in Sources */,
 				44859B1C1ECD5EE300C7DB80 /* TodayNavigationViewController.m in Sources */,
+				44859B321ECE828900C7DB80 /* UserProvider.m in Sources */,
 				C5CF86251ECD3D0F00888D91 /* ViewController.m in Sources */,
 				C5CF86221ECD3D0F00888D91 /* AppDelegate.m in Sources */,
 				44859B041ECD4E7400C7DB80 /* CalendarViewController.m in Sources */,
