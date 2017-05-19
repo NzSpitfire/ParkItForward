@@ -17,6 +17,7 @@ static NSString * const cellIdentifier = @"cell";
 static NSString * const kGetBookings1 = @"http://demo0788157.mockable.io/booking1";
 static NSString * const kGetBookings2 = @"http://demo0788157.mockable.io/booking2";
 static NSString * const kGetBookings3 = @"http://demo0788157.mockable.io/booking3";
+static NSString * const kGetBookings4 = @"http://demo0788157.mockable.io/booking4";
 
 static int counter = 0;
 
@@ -29,6 +30,9 @@ static int counter = 0;
 
 @property (nonatomic, weak) id <TodayViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIView *fullyBookedContainer;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic) BOOL isFirstLoad;
 
 @end
 
@@ -38,11 +42,16 @@ static int counter = 0;
     self = [super init];
     if (self){
         self.delegate = delegate;
+        self.fullyBookedContainer.hidden = YES;
+        self.isFirstLoad = YES;
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2;
+    self.imageView.clipsToBounds = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -79,7 +88,15 @@ static int counter = 0;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSInteger numberRows = 0;
     if (self.freeSlots){
+        self.fullyBookedContainer.hidden = YES;
         numberRows = [self.freeSlots count];
+    }
+    if (numberRows==0){
+        if (self.isFirstLoad){
+            self.fullyBookedContainer.hidden = YES;
+        }else {
+            self.fullyBookedContainer.hidden = NO;
+        }
     }
     return numberRows;
 }
@@ -98,18 +115,20 @@ static int counter = 0;
 }
 
 -(void) fetchBookings{
-    
+    self.isFirstLoad = NO;
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     __weak typeof(self) weakSelf = self;
     DataProvider * provider = [DataProvider sharedInstance];
     NSString * url = nil;
-    if (counter%3==0){
+    if (counter%4==0){
         url = kGetBookings1;
-    }else if (counter%3==1){
+    }else if (counter%4==1){
         url = kGetBookings2;
     }
-    else if (counter%3==2){
+    else if (counter%4==2){
         url = kGetBookings3;
+    }else if (counter%4==3){
+        url = kGetBookings4;
     }
     [provider getBookings:url
              successBlock:^(NSArray * objects){

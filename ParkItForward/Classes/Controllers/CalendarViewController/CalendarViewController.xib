@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,6 +14,8 @@
             <connections>
                 <outlet property="backButton" destination="llC-C9-e8X" id="tfo-42-B0u"/>
                 <outlet property="calendarView" destination="PCe-tZ-BD5" id="PcO-OS-wZP"/>
+                <outlet property="fullyBookedContainer" destination="Zen-iy-wTt" id="VJb-q9-bY1"/>
+                <outlet property="imageView" destination="eJA-dE-YRc" id="Ik1-Ti-rpB"/>
                 <outlet property="tableView" destination="bRY-V4-5td" id="BRk-g5-Zgi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -49,18 +52,51 @@
                         <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="zaA-QY-rt5"/>
                     </connections>
                 </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zen-iy-wTt">
+                    <rect key="frame" x="0.0" y="322" width="375" height="345"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angry_monkey" translatesAutoresizingMaskIntoConstraints="NO" id="eJA-dE-YRc">
+                            <rect key="frame" x="112.5" y="53" width="150" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="eJA-dE-YRc" secondAttribute="height" multiplier="1:1" id="Glw-BH-ckv"/>
+                                <constraint firstAttribute="width" constant="150" id="Htz-hU-KBz"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fully booked!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-nQ-x7H">
+                            <rect key="frame" x="69" y="233" width="234" height="31.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rBs-nQ-x7H" secondAttribute="trailing" constant="72" id="JqX-fY-UHN"/>
+                        <constraint firstItem="eJA-dE-YRc" firstAttribute="top" secondItem="Zen-iy-wTt" secondAttribute="top" constant="53" id="OIE-kW-24Y"/>
+                        <constraint firstItem="eJA-dE-YRc" firstAttribute="centerX" secondItem="Zen-iy-wTt" secondAttribute="centerX" id="iR5-Xt-4cO"/>
+                        <constraint firstItem="rBs-nQ-x7H" firstAttribute="leading" secondItem="Zen-iy-wTt" secondAttribute="leading" constant="69" id="lmp-hn-eRM"/>
+                        <constraint firstItem="rBs-nQ-x7H" firstAttribute="top" secondItem="eJA-dE-YRc" secondAttribute="bottom" constant="30" id="myQ-K6-Mz1"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="PCe-tZ-BD5" secondAttribute="trailing" id="LH3-0R-Moq"/>
+                <constraint firstItem="Zen-iy-wTt" firstAttribute="top" secondItem="PCe-tZ-BD5" secondAttribute="bottom" constant="8" id="MYk-yn-iAz"/>
                 <constraint firstAttribute="bottom" secondItem="bRY-V4-5td" secondAttribute="bottom" id="N4J-7w-Doj"/>
+                <constraint firstAttribute="bottom" secondItem="Zen-iy-wTt" secondAttribute="bottom" id="She-dF-urx"/>
                 <constraint firstItem="bRY-V4-5td" firstAttribute="top" secondItem="PCe-tZ-BD5" secondAttribute="bottom" id="eNq-bI-0L5"/>
                 <constraint firstItem="PCe-tZ-BD5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hBI-LZ-TC0"/>
+                <constraint firstItem="Zen-iy-wTt" firstAttribute="width" secondItem="PCe-tZ-BD5" secondAttribute="width" id="hMs-WG-0DY"/>
                 <constraint firstItem="bRY-V4-5td" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lFf-1F-jhY"/>
                 <constraint firstAttribute="trailing" secondItem="bRY-V4-5td" secondAttribute="trailing" id="lPs-o0-aOb"/>
+                <constraint firstItem="Zen-iy-wTt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qyI-ml-WrG"/>
                 <constraint firstItem="PCe-tZ-BD5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="z6S-dg-odX"/>
             </constraints>
             <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="angry_monkey" width="215" height="215"/>
+    </resources>
 </document>
