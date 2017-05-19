@@ -36,8 +36,8 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbe-fX-2gZ">
-                    <rect key="frame" x="16" y="18" width="46" height="32"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="16" y="18" width="34" height="32"/>
+                    <state key="normal" title="Back"/>
                     <connections>
                         <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="YCu-J1-Efp"/>
                     </connections>

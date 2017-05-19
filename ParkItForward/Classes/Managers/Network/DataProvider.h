@@ -14,4 +14,7 @@
 - (void)getUsers:(void (^)(NSArray *categories))successBlock
         failure:(void (^)(NSError* error))failureBlock;
 
+- (void)getBookings:(void (^)(NSArray *categories))successBlock
+         failure:(void (^)(NSError* error))failureBlock;
+
 @end

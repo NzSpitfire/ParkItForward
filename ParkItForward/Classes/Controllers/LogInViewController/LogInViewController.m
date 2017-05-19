@@ -10,6 +10,7 @@
 #import "CalendarViewController.h"
 #import "RegistrationViewController.h"
 #import "TodayNavigationViewController.h"
+#import "ColorHelper.h"
 
 @interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -34,12 +35,11 @@
 }
 
 -(void)setupUIElements{
-    self.loginButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.loginButton.layer.borderWidth = 1.0f;
+    self.loginButton.backgroundColor = [ColorHelper getTopGradientColor];
     self.loginButton.layer.cornerRadius = 5.0f;
     
-    self.registerButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.registerButton.layer.borderWidth = 1.0f;
+    
+    self.registerButton.backgroundColor = [ColorHelper getTopGradientColor];
     self.registerButton.layer.cornerRadius = 5.0f;
 }
 #pragma mark - Button Actions

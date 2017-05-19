@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParkingEventModel.h"
+
+@protocol  TodayViewControllerDelegate <NSObject>
+
+-(void)presentConfirmationScreen:(ParkingEventModel*)model;
+-(void)presentCalendar;
+
+@end
 
 @interface TodayViewController : UIViewController
+-(instancetype)initWithDelegate:(id<TodayViewControllerDelegate>)delegate;
 
 @end

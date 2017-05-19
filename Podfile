@@ -12,4 +12,5 @@ target 'ParkItForward' do
 	pod 'Masonry'
 	pod 'AFNetworking', '~> 3.0'
 	pod 'FSCalendar'
+	pod 'MBProgressHUD', '~> 1.0.0'
 end

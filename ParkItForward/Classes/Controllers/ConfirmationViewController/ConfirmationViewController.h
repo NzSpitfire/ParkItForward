@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParkingEventModel.h"
 
 @interface ConfirmationViewController : UIViewController
 
+-(instancetype)initWithParkingEvent:(ParkingEventModel*)event;
 @end

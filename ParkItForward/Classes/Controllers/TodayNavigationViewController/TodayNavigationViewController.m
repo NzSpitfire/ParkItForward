@@ -9,8 +9,10 @@
 #import "TodayNavigationViewController.h"
 #import "TodayViewController.h"
 #import "Masonry-umbrella.h"
+#import "ConfirmationViewController.h"
+#import "CalendarViewController.h"
 
-@interface TodayNavigationViewController ()
+@interface TodayNavigationViewController () <TodayViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) TodayViewController * todayVC;
@@ -36,7 +38,7 @@
     [self removeCurrentContent];
     if (self.segmentControl.selectedSegmentIndex == 0){
         self.contentView.backgroundColor = [UIColor redColor];
-        self.todayVC = [[TodayViewController alloc] init];
+        self.todayVC = [[TodayViewController alloc] initWithDelegate:self];
         [self addChildViewController:self.todayVC];
         [self.contentView addSubview:self.todayVC.view];
         [self.todayVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -57,4 +59,14 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)presentCalendar{
+    CalendarViewController  * controller = [[CalendarViewController alloc] init];
+    [self.navigationController pushViewController:controller  animated:YES];
+}
+-(void)presentConfirmationScreen:(ParkingEventModel*)model{
+    
+    ConfirmationViewController * controller = [[ConfirmationViewController alloc] initWithParkingEvent:model];
+    [self.navigationController pushViewController:controller  animated:YES];
+    
+}
 @end

@@ -20,6 +20,7 @@
 		44859B1D1ECD5EE300C7DB80 /* TodayNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B1B1ECD5EE300C7DB80 /* TodayNavigationViewController.xib */; };
 		44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B201ECD5F5F00C7DB80 /* TodayViewController.m */; };
 		44859B231ECD5F5F00C7DB80 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */; };
+		44859B2D1ECE60E500C7DB80 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B2C1ECE60E500C7DB80 /* ColorHelper.m */; };
 		C55A08F11ECD702500EA09E3 /* TodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C55A08EF1ECD702500EA09E3 /* TodayCell.m */; };
 		C55A08F21ECD702500EA09E3 /* TodayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55A08F01ECD702500EA09E3 /* TodayCell.xib */; };
 		C5CF861F1ECD3D0F00888D91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF861E1ECD3D0F00888D91 /* main.m */; };
@@ -71,6 +72,8 @@
 		44859B1F1ECD5F5F00C7DB80 /* TodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		44859B201ECD5F5F00C7DB80 /* TodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
+		44859B2B1ECE60E500C7DB80 /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHelper.h; sourceTree = "<group>"; };
+		44859B2C1ECE60E500C7DB80 /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHelper.m; sourceTree = "<group>"; };
 		704103F30445CBADA89A31F5 /* Pods_ParkItForward.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItForward.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D3C978B4147E192738F787 /* Pods-ParkItForward.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItForward.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkItForward/Pods-ParkItForward.debug.xcconfig"; sourceTree = "<group>"; };
 		C55A08EE1ECD702500EA09E3 /* TodayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayCell.h; path = Cells/TodayCell.h; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 		44859AF61ECD47FA00C7DB80 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				44859B2E1ECE6F2E00C7DB80 /* Delegates */,
+				44859B291ECE60E500C7DB80 /* Utils */,
 				EC7EFD6E1ECDB8D000852D0D /* Managers */,
 				EC7EFD651ECDB13E00852D0D /* Models */,
 				44859AF71ECD47FA00C7DB80 /* Controllers */,
@@ -215,6 +220,30 @@
 				44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */,
 			);
 			path = TodayViewController;
+			sourceTree = "<group>";
+		};
+		44859B291ECE60E500C7DB80 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				44859B2A1ECE60E500C7DB80 /* ColorHelper */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		44859B2A1ECE60E500C7DB80 /* ColorHelper */ = {
+			isa = PBXGroup;
+			children = (
+				44859B2B1ECE60E500C7DB80 /* ColorHelper.h */,
+				44859B2C1ECE60E500C7DB80 /* ColorHelper.m */,
+			);
+			path = ColorHelper;
+			sourceTree = "<group>";
+		};
+		44859B2E1ECE6F2E00C7DB80 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		4656637972FDE7980928932E /* Pods */ = {
@@ -532,7 +561,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -545,6 +574,7 @@
 				EC7EFD751ECDBBD300852D0D /* DataProvider.m in Sources */,
 				EC7EFD6A1ECDB18900852D0D /* ParkingEventModel.m in Sources */,
 				44859B221ECD5F5F00C7DB80 /* TodayViewController.m in Sources */,
+				44859B2D1ECE60E500C7DB80 /* ColorHelper.m in Sources */,
 				EC7EFD6D1ECDB1A700852D0D /* UserModel.m in Sources */,
 				44859AFE1ECD48C500C7DB80 /* LogInViewController.m in Sources */,
 				44859B0A1ECD4E9500C7DB80 /* ConfirmationViewController.m in Sources */,

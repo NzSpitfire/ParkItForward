@@ -11,7 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodayViewController">
             <connections>
+                <outlet property="calendarButton" destination="AE0-rG-Sjn" id="eZp-Kb-aiI"/>
+                <outlet property="leftAvailableSlotsLabel" destination="XAc-33-7gV" id="U1P-Nu-Lcm"/>
                 <outlet property="tableView" destination="Ygp-gN-FV7" id="Sim-zS-Bbg"/>
+                <outlet property="topContainer" destination="Zbx-Mz-2xU" id="mO2-GV-AhN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,19 +29,19 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="available spots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0B-6N-CCW">
                             <rect key="frame" x="82.5" y="150" width="178.5" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAc-33-7gV">
-                            <rect key="frame" x="155.5" y="67.5" width="32" height="62.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="52"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="154.5" y="67.5" width="34.5" height="62.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="52"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deF-AU-IsQ">
                             <rect key="frame" x="71" y="15" width="201" height="32.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -59,11 +62,20 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="g4y-gL-Jp1"/>
+                        <outlet property="delegate" destination="-1" id="MaC-J8-gtr"/>
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AE0-rG-Sjn">
-                    <rect key="frame" x="288" y="617" width="71" height="30"/>
-                    <state key="normal" title="Not Today"/>
+                    <rect key="frame" x="244" y="617" width="115" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="115" id="v6X-Ia-ehA"/>
+                    </constraints>
+                    <state key="normal" title="Not Today">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="calendarBiuttonPressed:" destination="-1" eventType="touchUpInside" id="fxC-Il-zKX"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

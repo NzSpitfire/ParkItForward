@@ -8,6 +8,22 @@
 
 #import "ParkingEventModel.h"
 
+/*
+ {
+ id: "Rob.Oliver@foxsports.com.au",
+ timeStart: "1495152000",
+ timeEnd: "1495238399",
+ carSpot: "B1 21",
+ isFree: false
+ },
+ */
+
+static NSString * const kIdKey = @"id";
+static NSString * const kTimeStartKey = @"timeStart";
+static NSString * const kTimeEndKey = @"timeEnd";
+static NSString * const kCarSportKey = @"carSpot";
+static NSString * const kIsFreeKey = @"isFree";
+
 @interface ParkingEventModel ()
 
 @property (nonatomic, strong) NSString * userId;
@@ -31,5 +47,35 @@
     return self;
 }
 -(void)parseDict:(NSDictionary*)dict{
+    [self parseUserId:dict];
+    [self parseTimeStart:dict];
+    [self parseTimeEnd:dict];
+    [self parseCarSpot:dict];
+    [self parseIsFree:dict];
+}
+-(void)parseUserId:(NSDictionary*)dict{
+    if (dict[kIdKey]){
+        self.userId = dict[kIdKey];
+    }
+}
+-(void)parseTimeStart:(NSDictionary*)dict{
+    if (dict[kTimeStartKey]){
+        self.timeStart = [dict[kTimeStartKey] doubleValue];
+    }
+}
+-(void)parseTimeEnd:(NSDictionary*)dict{
+    if (dict[kTimeEndKey]){
+        self.timeEnd = [dict[kTimeEndKey] doubleValue];
+    }
+}
+-(void)parseCarSpot:(NSDictionary*)dict{
+    if (dict[kCarSportKey]){
+        self.carSpot = dict[kCarSportKey];
+    }
+}
+-(void)parseIsFree:(NSDictionary*)dict{
+    if (dict[kIsFreeKey]){
+        self.isFree = [dict[kIsFreeKey] boolValue];
+    }
 }
 @end
