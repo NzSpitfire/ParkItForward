@@ -80,11 +80,11 @@ static NSString *cellIdentifier = @"TodayCell";
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     __weak typeof(self) weakSelf = self;
     DataProvider * provider = [DataProvider sharedInstance];
-    [provider getBookings:^(NSArray * objects){
+    [provider getSpots:^(NSArray * objects){
         [weakSelf hideSpinner];
         __strong typeof(self) strongSelf = weakSelf;
         strongSelf.dataSourceArray = [NSArray arrayWithArray:objects];
-        strongSelf.freeSlots = [NSArray arrayWithArray: [weakSelf getFreeSlots]];
+        strongSelf.freeSlots = [NSArray arrayWithArray: [weakSelf getMySlots]];
         [weakSelf updateViews];
     }failure:^(NSError * error){
         [weakSelf hideSpinner];
@@ -105,13 +105,13 @@ static NSString *cellIdentifier = @"TodayCell";
         [self.tableView reloadData];
         });
 }
--(NSArray*)getFreeSlots{
+-(NSArray*)getMySlots{
     NSArray * resValue = nil;
     NSInteger count = [self.dataSourceArray count];
     NSMutableArray * array = [NSMutableArray array];
     for (NSInteger index =0; index<count; index++){
         ParkingEventModel * currentEvent = self.dataSourceArray[index];
-        if (currentEvent.isFree){
+        if (!currentEvent.isFree){
             [array addObject:currentEvent];
         }
     }
@@ -120,6 +120,8 @@ static NSString *cellIdentifier = @"TodayCell";
     }
     return resValue;
 }
+
+
 #pragma mark - TableView Delegate Method
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

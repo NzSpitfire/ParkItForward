@@ -13,6 +13,7 @@
 
 static NSString * const kGetAllUsersPath = @"https://9ifsk0e0j5.execute-api.ap-southeast-2.amazonaws.com/Testing/users";
 static NSString * const kGetBookings = @"http://demo0788157.mockable.io/bookings";//@"https://9ifsk0e0j5.execute-api.ap-southeast-2.amazonaws.com/Testing/bookings";
+static NSString * const kGetMySpots = @"http://demo0788157.mockable.io/myspots";
 
 @implementation DataProvider
 
@@ -88,6 +89,31 @@ static NSString * const kGetBookings = @"http://demo0788157.mockable.io/bookings
     [sessionManager.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
     
     NSString * baseUrl = kGetBookings;
+    NSURL * URL = [NSURL URLWithString:baseUrl];
+    __weak typeof(self) weakSelf = self;
+    [sessionManager GET:URL.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSArray * array = [weakSelf parseBookings:responseObject];
+        if (successBlock){
+            successBlock (array);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failureBlock){
+            failureBlock(error);
+        }
+    }];
+}
+
+- (void)getSpots:(void (^)(NSArray *categories))successBlock
+            failure:(void (^)(NSError* error))failureBlock{
+    AFHTTPSessionManager * sessionManager = [AFHTTPSessionManager manager];
+    [sessionManager setRequestSerializer:[AFJSONRequestSerializer serializer]];
+    [sessionManager setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    [sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [sessionManager.requestSerializer setTimeoutInterval:30];
+    [sessionManager.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
+    
+    NSString * baseUrl = kGetMySpots;
     NSURL * URL = [NSURL URLWithString:baseUrl];
     __weak typeof(self) weakSelf = self;
     [sessionManager GET:URL.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
