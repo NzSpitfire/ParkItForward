@@ -86,7 +86,7 @@ static NSString *cellIdentifier = @"TodayCell";
     
     if (self.freeSlots){
         ParkingEventModel * currentModel = self.freeSlots[indexPath.row];
-        [cell.lblParkNumber setText:[NSString stringWithFormat:@"Slot : %@", currentModel.carSpot]];
+        [cell.lblParkNumber setText:[NSString stringWithFormat:@"%@", currentModel.carSpot]];
         [cell.lblToDate setText:@"All Day"];
     }
     return cell;

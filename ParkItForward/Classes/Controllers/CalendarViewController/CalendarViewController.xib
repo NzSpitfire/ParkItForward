@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController">
             <connections>
-                <outlet property="backButton" destination="llC-C9-e8X" id="tfo-42-B0u"/>
                 <outlet property="calendarView" destination="PCe-tZ-BD5" id="PcO-OS-wZP"/>
                 <outlet property="fullyBookedContainer" destination="Zen-iy-wTt" id="VJb-q9-bY1"/>
                 <outlet property="imageView" destination="eJA-dE-YRc" id="Ik1-Ti-rpB"/>
@@ -26,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCe-tZ-BD5" customClass="FSCalendar">
-                    <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="250" id="0Cc-ut-VTP"/>
@@ -37,23 +36,15 @@
                     </connections>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bRY-V4-5td">
-                    <rect key="frame" x="0.0" y="314" width="375" height="353"/>
+                    <rect key="frame" x="0.0" y="250" width="375" height="417"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="oc5-zp-I8y"/>
                         <outlet property="delegate" destination="-1" id="Cs8-44-IMb"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llC-C9-e8X">
-                    <rect key="frame" x="16" y="20" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Back"/>
-                    <connections>
-                        <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="zaA-QY-rt5"/>
-                    </connections>
-                </button>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zen-iy-wTt">
-                    <rect key="frame" x="0.0" y="322" width="375" height="345"/>
+                    <rect key="frame" x="0.0" y="258" width="375" height="409"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angry_monkey" translatesAutoresizingMaskIntoConstraints="NO" id="eJA-dE-YRc">
                             <rect key="frame" x="112.5" y="53" width="150" height="150"/>
@@ -91,7 +82,7 @@
                 <constraint firstItem="bRY-V4-5td" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lFf-1F-jhY"/>
                 <constraint firstAttribute="trailing" secondItem="bRY-V4-5td" secondAttribute="trailing" id="lPs-o0-aOb"/>
                 <constraint firstItem="Zen-iy-wTt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qyI-ml-WrG"/>
-                <constraint firstItem="PCe-tZ-BD5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="z6S-dg-odX"/>
+                <constraint firstItem="PCe-tZ-BD5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z6S-dg-odX"/>
             </constraints>
             <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>

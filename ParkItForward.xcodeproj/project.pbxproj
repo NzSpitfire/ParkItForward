@@ -22,6 +22,7 @@
 		44859B231ECD5F5F00C7DB80 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44859B211ECD5F5F00C7DB80 /* TodayViewController.xib */; };
 		44859B2D1ECE60E500C7DB80 /* ColorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B2C1ECE60E500C7DB80 /* ColorHelper.m */; };
 		44859B321ECE828900C7DB80 /* UserProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B311ECE828900C7DB80 /* UserProvider.m */; };
+		44859B361ECE98A800C7DB80 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44859B351ECE98A800C7DB80 /* BaseViewController.m */; };
 		C55A08F11ECD702500EA09E3 /* TodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C55A08EF1ECD702500EA09E3 /* TodayCell.m */; };
 		C55A08F21ECD702500EA09E3 /* TodayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55A08F01ECD702500EA09E3 /* TodayCell.xib */; };
 		C57F27CB1ECE8405008325D8 /* SpotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C57F27C91ECE8405008325D8 /* SpotViewController.m */; };
@@ -79,6 +80,8 @@
 		44859B2C1ECE60E500C7DB80 /* ColorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorHelper.m; sourceTree = "<group>"; };
 		44859B301ECE828900C7DB80 /* UserProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProvider.h; sourceTree = "<group>"; };
 		44859B311ECE828900C7DB80 /* UserProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProvider.m; sourceTree = "<group>"; };
+		44859B341ECE98A800C7DB80 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		44859B351ECE98A800C7DB80 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		704103F30445CBADA89A31F5 /* Pods_ParkItForward.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkItForward.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D3C978B4147E192738F787 /* Pods-ParkItForward.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkItForward.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkItForward/Pods-ParkItForward.debug.xcconfig"; sourceTree = "<group>"; };
 		C55A08EE1ECD702500EA09E3 /* TodayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TodayCell.h; path = Cells/TodayCell.h; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		44859AF71ECD47FA00C7DB80 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				44859B331ECE989700C7DB80 /* BaseViewController */,
 				C57F27C71ECE83F0008325D8 /* SpotViewController */,
 				44859B1E1ECD5F5400C7DB80 /* TodayViewController */,
 				44859B181ECD5EE300C7DB80 /* TodayNavigationViewController */,
@@ -262,6 +266,15 @@
 				44859B311ECE828900C7DB80 /* UserProvider.m */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		44859B331ECE989700C7DB80 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44859B341ECE98A800C7DB80 /* BaseViewController.h */,
+				44859B351ECE98A800C7DB80 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		4656637972FDE7980928932E /* Pods */ = {
@@ -480,6 +493,7 @@
 				TargetAttributes = {
 					C5CF86191ECD3D0F00888D91 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = M5646ADR4K;
 						ProvisioningStyle = Automatic;
 					};
 					C5CF86321ECD3D0F00888D91 = {
@@ -608,6 +622,7 @@
 				EC7EFD6D1ECDB1A700852D0D /* UserModel.m in Sources */,
 				44859AFE1ECD48C500C7DB80 /* LogInViewController.m in Sources */,
 				44859B0A1ECD4E9500C7DB80 /* ConfirmationViewController.m in Sources */,
+				44859B361ECE98A800C7DB80 /* BaseViewController.m in Sources */,
 				C55A08F11ECD702500EA09E3 /* TodayCell.m in Sources */,
 				C57F27CB1ECE8405008325D8 /* SpotViewController.m in Sources */,
 				44859B1C1ECD5EE300C7DB80 /* TodayNavigationViewController.m in Sources */,
@@ -704,7 +719,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -746,7 +761,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -758,6 +773,7 @@
 			baseConfigurationReference = A3D3C978B4147E192738F787 /* Pods-ParkItForward.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M5646ADR4K;
 				INFOPLIST_FILE = ParkItForward/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.sports.fox.ParkItForward;
@@ -770,6 +786,7 @@
 			baseConfigurationReference = 04E970432C10C491132BCFAB /* Pods-ParkItForward.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M5646ADR4K;
 				INFOPLIST_FILE = ParkItForward/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.sports.fox.ParkItForward;

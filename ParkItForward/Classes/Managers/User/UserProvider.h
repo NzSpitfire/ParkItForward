@@ -14,7 +14,7 @@
 @property (nonatomic, readonly) UserModel * currentUser;
 
 + (id)sharedInstance;
--(UserModel*) currentUser;
+-(UserModel*) getUser;
 -(void)storeCurrentUser:(UserModel*)userModel;
 -(void)resetCurrentUser;
 

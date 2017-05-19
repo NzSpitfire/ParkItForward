@@ -12,6 +12,7 @@
 #import "TodayCell.h"
 #import "ParkingEventModel.h"
 #import "DataProvider.h"
+#import "ColorHelper.h"
 
 static NSString * const cellIdentifier = @"cell";
 static NSString * const kGetBookings1 = @"http://demo0788157.mockable.io/booking1";
@@ -50,19 +51,45 @@ static int counter = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2;
     self.imageView.clipsToBounds = YES;
-    // Do any additional setup after loading the view from its nib.
+    
+        // Do any additional setup after loading the view from its nib.
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.translucent = NO;
+    UIImage * image = [UIImage imageNamed:@"foxsports_logo"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    self.navigationController.navigationBar.barTintColor = [ColorHelper getTopGradientColor];
+    [self.navigationController.navigationBar.topItem setTitleView:imageView];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+}
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+-(BOOL) prefersStatusBarHidden
+{
+    return NO;
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self fetchBookings];
 }
+-(void)backButtonPressed{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -108,7 +135,7 @@ static int counter = 0;
     
     if (self.freeSlots){
         ParkingEventModel * currentModel = self.freeSlots[indexPath.row];
-        [cell.lblParkNumber setText:[NSString stringWithFormat:@"Slot : %@", currentModel.carSpot]];
+        [cell.lblParkNumber setText:[NSString stringWithFormat:@"%@", currentModel.carSpot]];
         [cell.lblToDate setText:@"All Day"];
     }
     return cell;

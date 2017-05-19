@@ -12,6 +12,7 @@
 #import "ConfirmationViewController.h"
 #import "CalendarViewController.h"
 #import "SpotViewController.h"
+#import "UserProvider.h"
 
 @interface TodayNavigationViewController () <TodayViewControllerDelegate, SpotViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
@@ -19,6 +20,7 @@
 @property (strong, nonatomic) TodayViewController * todayVC;
 @property (strong, nonatomic) SpotViewController * spotVC;
 
+@property (nonatomic) BOOL isOwner;
 
 
 @end
@@ -27,14 +29,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ //   [self setupInitialValues];
+ //   [self setupInitialViews];
     [self segmentValueChanged:nil];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+-(BOOL) prefersStatusBarHidden
+{
+    return NO;
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setupInitialValues{
+    UserModel * userModel = [[UserProvider sharedInstance] getUser];
+    self.isOwner =  userModel.isOwner;
+}
+-(void)setupInitialViews{
+    if (self.isOwner){
+        [self.segmentControl setTitle:@"Release Spot" forSegmentAtIndex:0];
+        [self.segmentControl setTitle:@"Claim Back" forSegmentAtIndex:1];
+    }else {
+        [self.segmentControl setTitle:@"Availability" forSegmentAtIndex:0];
+        [self.segmentControl setTitle:@"My Spots" forSegmentAtIndex:1];
+    }
 }
 - (IBAction)segmentValueChanged:(id)sender {
     

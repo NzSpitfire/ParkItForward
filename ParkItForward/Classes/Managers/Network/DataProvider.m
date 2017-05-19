@@ -14,6 +14,7 @@
 static NSString * const kGetAllUsersPath = @"https://9ifsk0e0j5.execute-api.ap-southeast-2.amazonaws.com/Testing/users";
 static NSString * const kGetBookings = @"http://demo0788157.mockable.io/bookings";//@"https://9ifsk0e0j5.execute-api.ap-southeast-2.amazonaws.com/Testing/bookings";
 static NSString * const kGetMySpots = @"http://demo0788157.mockable.io/myspots";
+static NSString * const kMockUsers = @"http://demo0788157.mockable.io/users";
 
 @implementation DataProvider
 
@@ -42,7 +43,7 @@ static NSString * const kGetMySpots = @"http://demo0788157.mockable.io/myspots";
     [sessionManager.requestSerializer setTimeoutInterval:30];
     [sessionManager.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
     
-    NSString * baseUrl = kGetAllUsersPath;
+    NSString * baseUrl = kMockUsers;//kGetAllUsersPath;
     NSURL * URL = [NSURL URLWithString:baseUrl];
     __weak typeof(self) weakSelf = self;
     [sessionManager GET:URL.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {

@@ -29,7 +29,7 @@
     
     return self;
 }
--(UserModel*) currentUser{
+-(UserModel*) getUser{
     return self.currentUser;
 }
 -(void)storeCurrentUser:(UserModel*)userModel{
