@@ -13,7 +13,7 @@
 #import "CalendarViewController.h"
 #import "SpotViewController.h"
 
-@interface TodayNavigationViewController () <TodayViewControllerDelegate>
+@interface TodayNavigationViewController () <TodayViewControllerDelegate, SpotViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) TodayViewController * todayVC;
@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self segmentValueChanged:nil];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     // Do any additional setup after loading the view from its nib.
 }
 
