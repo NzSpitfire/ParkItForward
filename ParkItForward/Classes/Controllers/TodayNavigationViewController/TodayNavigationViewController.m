@@ -11,11 +11,13 @@
 #import "Masonry-umbrella.h"
 #import "ConfirmationViewController.h"
 #import "CalendarViewController.h"
+#import "SpotViewController.h"
 
 @interface TodayNavigationViewController () <TodayViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) TodayViewController * todayVC;
+@property (strong, nonatomic) SpotViewController * spotVC;
 
 
 
@@ -45,7 +47,13 @@
             make.edges.equalTo(self.contentView);
         }];
     }else {
-        self.contentView.backgroundColor = [UIColor blackColor];
+        self.contentView.backgroundColor = [UIColor redColor];
+        self.spotVC = [[SpotViewController alloc] initWithDelegate:self];
+        [self addChildViewController:self.spotVC];
+        [self.contentView addSubview:self.spotVC.view];
+        [self.spotVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.contentView);
+        }];
     }
 }
 -(void) removeCurrentContent{
@@ -53,6 +61,7 @@
     for (UIView * currentView in self.contentView.subviews){
         [currentView removeFromSuperview];
         [self.todayVC removeFromParentViewController];
+        [self.spotVC removeFromParentViewController];
     }
 }
 - (IBAction)backButtonPressed:(id)sender {

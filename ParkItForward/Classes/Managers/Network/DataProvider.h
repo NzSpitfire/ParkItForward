@@ -16,6 +16,8 @@
 
 - (void)getBookings:(void (^)(NSArray *categories))successBlock
          failure:(void (^)(NSError* error))failureBlock;
+- (void)getSpots:(void (^)(NSArray *categories))successBlock
+            failure:(void (^)(NSError* error))failureBlock;
 
 - (void)getBookings:(NSString*)baseUrl
        successBlock:(void (^)(NSArray *categories))successBlock

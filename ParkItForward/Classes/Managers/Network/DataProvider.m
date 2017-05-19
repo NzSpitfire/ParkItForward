@@ -13,7 +13,7 @@
 
 static NSString * const kGetAllUsersPath = @"https://9ifsk0e0j5.execute-api.ap-southeast-2.amazonaws.com/Testing/users";
 static NSString * const kGetBookings = @"http://demo0788157.mockable.io/bookings";//@"https://9ifsk0e0j5.execute-api.ap-southeast-2.amazonaws.com/Testing/bookings";
-
+static NSString * const kGetMySpots = @"http://demo0788157.mockable.io/myspots";
 
 @implementation DataProvider
 
@@ -103,8 +103,8 @@ static NSString * const kGetBookings = @"http://demo0788157.mockable.io/bookings
         }
     }];
 }
-- (void)getBookings:(NSString*)baseUrl
-       successBlock:(void (^)(NSArray *categories))successBlock
+
+- (void)getSpots:(void (^)(NSArray *categories))successBlock
             failure:(void (^)(NSError* error))failureBlock{
     AFHTTPSessionManager * sessionManager = [AFHTTPSessionManager manager];
     [sessionManager setRequestSerializer:[AFJSONRequestSerializer serializer]];
@@ -113,6 +113,7 @@ static NSString * const kGetBookings = @"http://demo0788157.mockable.io/bookings
     [sessionManager.requestSerializer setTimeoutInterval:30];
     [sessionManager.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
     
+    NSString * baseUrl = kGetMySpots;
     NSURL * URL = [NSURL URLWithString:baseUrl];
     __weak typeof(self) weakSelf = self;
     [sessionManager GET:URL.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -127,7 +128,6 @@ static NSString * const kGetBookings = @"http://demo0788157.mockable.io/bookings
         }
     }];
 }
-
 -(NSArray*)parseBookings:(id)response{
     NSArray * resValue = nil;
     if (![response isKindOfClass:[NSArray class]]){
